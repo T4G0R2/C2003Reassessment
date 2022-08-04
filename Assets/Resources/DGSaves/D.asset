@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b21898cd5f50094e92e632b34ee3349, type: 3}
+  m_Name: D
+  m_EditorClassIdentifier: 
+  DGLinkData:
+  - ParentGUID: START
+    PortID: -1
+    PortName: Next
+    TargetGUID: bd273338-da32-4f6b-9219-fba4531ece8f
+    Button:
+      buttonText: 
+  - ParentGUID: bd273338-da32-4f6b-9219-fba4531ece8f
+    PortID: -1
+    PortName: Option 1
+    TargetGUID: 6bf4053a-1e59-445c-adb2-dd3dc7108800
+    Button:
+      buttonText: 
+  - ParentGUID: bd273338-da32-4f6b-9219-fba4531ece8f
+    PortID: -1
+    PortName: Option 2
+    TargetGUID: 88e3d02d-4285-4006-859c-8d35046707cc
+    Button:
+      buttonText: 
+  - ParentGUID: bd273338-da32-4f6b-9219-fba4531ece8f
+    PortID: -1
+    PortName: Option 3
+    TargetGUID: b295d238-aa9d-4fe2-b3de-94c7efde9c9a
+    Button:
+      buttonText: 
+  DGNodeData:
+  - NodeGUID: bd273338-da32-4f6b-9219-fba4531ece8f
+    NodeLabel: 
+    Position: {x: 383, y: 152}
+    NodeDialog: []
+  - NodeGUID: 6bf4053a-1e59-445c-adb2-dd3dc7108800
+    NodeLabel: 
+    Position: {x: 662, y: 123}
+    NodeDialog: []
+  - NodeGUID: 88e3d02d-4285-4006-859c-8d35046707cc
+    NodeLabel: 
+    Position: {x: 696, y: 239}
+    NodeDialog: []
+  - NodeGUID: b295d238-aa9d-4fe2-b3de-94c7efde9c9a
+    NodeLabel: 
+    Position: {x: 724, y: 438}
+    NodeDialog: []
