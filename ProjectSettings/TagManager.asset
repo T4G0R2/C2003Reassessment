@@ -10,6 +10,7 @@ TagManager:
   - Sniper3
   - Hostage
   - Door
+  - ControlsHUD
   layers:
   - Default
   - TransparentFX
