@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 17
+  controlID: 22
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 108
+  controlID: 23
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 109
+  controlID: 24
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/models/Bush
+    - Assets/models/Character_Placeholder
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/models/Bush
+  - Assets/models/Character_Placeholder
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\karle\Desktop\GitHub\C2003Reassessment
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ccf50000
-    m_LastClickedID: 62924
-    m_ExpandedIDs: 00000000186a00002a6a00002c6a0000346a000000ca9a3bffffff7f
+    m_SelectedIDs: 00720000
+    m_LastClickedID: 29184
+    m_ExpandedIDs: 0000000086710000c471000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000186a0000
+    m_ExpandedIDs: 0000000086710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -490,21 +490,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6ea5feff6ec3feffe4f7feffc602ffffd202fffffe02ffff1803ffff1c03ffff480cffff121affff1c50ffff30fbffff52a1000002f4000058f50000
+      m_ExpandedIDs: b6faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Hostage
+        m_OriginalName: Hostage
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 25526
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -111.08974, y: 58.708836, z: -93.201096}
+    m_Target: {x: -128.19391, y: 78.68545, z: 23.992813}
     speed: 2
-    m_Value: {x: -111.08974, y: 58.708836, z: -93.201096}
+    m_Value: {x: -128.19391, y: 78.68545, z: 23.992813}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -788,13 +788,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.20020196, y: 0.55980295, z: -0.14174962, w: 0.79160124}
+    m_Target: {x: -0.18470466, y: -0.7479553, z: 0.23293453, w: -0.5936266}
     speed: 2
-    m_Value: {x: 0.20039578, y: 0.5585631, z: -0.14143604, w: 0.79236656}
+    m_Value: {x: -0.18433625, y: -0.7487685, z: 0.23318754, w: -0.5924436}
   m_Size:
-    m_Target: 2.5775025
+    m_Target: 1.2247448
     speed: 2
-    m_Value: 2.5775025
+    m_Value: 1.2247448
   m_Ortho:
     m_Target: 0
     speed: 2
