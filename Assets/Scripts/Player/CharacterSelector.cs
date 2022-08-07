@@ -10,6 +10,7 @@ public class CharacterSelector : MonoBehaviour
     [SerializeField] private GameObject _sniper3HUD;
     [SerializeField] private GameObject _selectionIcon;
     [SerializeField] private Transform _canvas;
+    [SerializeField] private GameObject _pauseMenuPrefab;
     private GameObject _negotiator;
     private GameObject _negotiatorPlaceholder;
     private CharacterController _negotioatorController;
@@ -18,12 +19,15 @@ public class CharacterSelector : MonoBehaviour
     private GameObject _sniper3;
     private GameObject _selectionIconObject;
     private GameObject _currentHUD;
+    public GameObject _pauseMenu;
     private int _characterID = 1;
     private int _previousID = 1;
+    public bool IsPaused;
 
     // Start is called before the first frame update
     void Start()
     {
+        IsPaused = false;
         InstantiateHUD(_characterID);
         _negotiator = GameObject.FindGameObjectWithTag("Player");
         _sniper1 = GameObject.FindGameObjectWithTag("Sniper1");
@@ -34,41 +38,50 @@ public class CharacterSelector : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Tab"))
+        if (Input.GetKeyDown(KeyCode.Escape) && (IsPaused == false))
+        {
+            _pauseMenu = Instantiate(_pauseMenuPrefab);
+            _pauseMenu.transform.SetParent(_canvas);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            IsPaused = true;
+            Time.timeScale = 0;
+        }
+        if (Input.GetButtonDown("Tab") && (IsPaused == false))
         {
             _selectionIconObject = Instantiate(_selectionIcon);
             _currentHUD.transform.SetParent(_canvas);
             
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetButton("Tab") && _characterID != 1)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetButton("Tab") && _characterID != 1 && (IsPaused == false))
         {
             _characterID = 1;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && Input.GetButton("Tab") && _characterID != 2)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && Input.GetButton("Tab") && _characterID != 2 && (IsPaused == false))
         {
             _characterID = 2;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && Input.GetButton("Tab") && _characterID != 3)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && Input.GetButton("Tab") && _characterID != 3 && (IsPaused == false))
         {
             _characterID = 3;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && Input.GetButton("Tab") && _characterID != 4)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && Input.GetButton("Tab") && _characterID != 4 && (IsPaused == false))
         {
             _characterID = 4;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
         }
-        if (Input.GetButtonUp("Tab"))
+        if (Input.GetButtonUp("Tab") && (IsPaused == false))
         {
             if (_selectionIconObject != null) Destroy(_selectionIconObject);
         }

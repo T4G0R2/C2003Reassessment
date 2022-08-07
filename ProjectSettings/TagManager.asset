@@ -11,6 +11,7 @@ TagManager:
   - Hostage
   - Door
   - ControlsHUD
+  - VerificationHUD
   layers:
   - Default
   - TransparentFX
