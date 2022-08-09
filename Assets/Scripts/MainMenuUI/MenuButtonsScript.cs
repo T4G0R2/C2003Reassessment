@@ -9,6 +9,7 @@ public class MenuButtonsScript : MonoBehaviour
     [SerializeField] private Transform _canvas;
     [SerializeField] private GameObject _controlsPrefab;
     [SerializeField] private GameObject _controlsHUD;
+    [SerializeField] private GameObject _interrogationHUD;
     [SerializeField] private GameObject _verificationHUD;
     [SerializeField] private GameObject _player;
     private CharacterSelector _charSel;
@@ -63,5 +64,18 @@ public class MenuButtonsScript : MonoBehaviour
     {
         _verificationHUD = GameObject.FindGameObjectWithTag("VerificationHUD");
         _verificationHUD.SetActive(false);
+    }
+
+    public void DestroyInterrogationUI()
+    {
+        _interrogationHUD = GameObject.FindGameObjectWithTag("InterrogationHUD");
+        Destroy(_interrogationHUD);
+
+        _player = GameObject.FindGameObjectWithTag("Player");
+        _charSel = _player.GetComponent<CharacterSelector>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        _charSel.IsPaused = false;
+        Time.timeScale = 1;
     }
 }

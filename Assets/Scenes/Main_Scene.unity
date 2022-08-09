@@ -10955,6 +10955,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promptMessage: Press e to use phone
+  _canvas: {fileID: 720834606}
+  _interrogationHUD: {fileID: 0}
+  _interrogationPrefab: {fileID: 3651260341064993660, guid: d04a14e520aee144e8a6c4e79f807636, type: 3}
+  _player: {fileID: 0}
+  CS: {fileID: 0}
 --- !u!4 &784897743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d082ed7935c13a148b3e6d2263ee4c6a, type: 3}

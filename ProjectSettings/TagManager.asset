@@ -13,6 +13,7 @@ TagManager:
   - ControlsHUD
   - VerificationHUD
   - CurrentAmmo
+  - InterrogationHUD
   layers:
   - Default
   - TransparentFX

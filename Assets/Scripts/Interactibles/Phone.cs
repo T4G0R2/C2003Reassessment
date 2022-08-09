@@ -5,13 +5,20 @@ using UnityEditor.Animations;
 
 public class Phone : Interactable
 {
-    // Start is called before the first frame update
+
+    [SerializeField] private Transform _canvas;
+    [SerializeField] private GameObject _interrogationHUD;
+    [SerializeField] private GameObject _interrogationPrefab;
+    [SerializeField] private GameObject _player;
+    [SerializeField] private CharacterSelector CS;
+
     void Start()
     {
-        
+        _player = GameObject.FindGameObjectWithTag("Player");
+        CS = _player.GetComponent<CharacterSelector>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
@@ -19,6 +26,18 @@ public class Phone : Interactable
 
     protected override void Interact()
     {
-        Debug.Log("interacted with" + gameObject.name);
+        SetupInterrogation();
+    }
+
+    private void SetupInterrogation()
+    {
+        _interrogationHUD = Instantiate(_interrogationPrefab);
+        _interrogationHUD.transform.SetParent(_canvas);
+        _interrogationHUD.tag = "InterrogationHUD";
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        CS.IsPaused = true;
+        Time.timeScale = 0;
     }
 }
