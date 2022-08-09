@@ -12,6 +12,7 @@ TagManager:
   - Door
   - ControlsHUD
   - VerificationHUD
+  - CurrentAmmo
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,8 @@ public class CharacterSelector : MonoBehaviour
     [SerializeField] private GameObject _selectionIcon;
     [SerializeField] private Transform _canvas;
     [SerializeField] private GameObject _pauseMenuPrefab;
+    [SerializeField] public int _characterID = 1;
+    private SniperShooting SH;
     private GameObject _negotiator;
     private GameObject _negotiatorPlaceholder;
     private CharacterController _negotioatorController;
@@ -20,7 +22,6 @@ public class CharacterSelector : MonoBehaviour
     private GameObject _selectionIconObject;
     private GameObject _currentHUD;
     public GameObject _pauseMenu;
-    private int _characterID = 1;
     private int _previousID = 1;
     public bool IsPaused;
 
@@ -34,11 +35,12 @@ public class CharacterSelector : MonoBehaviour
         _sniper2 = GameObject.FindGameObjectWithTag("Sniper2");
         _sniper3 = GameObject.FindGameObjectWithTag("Sniper3");
         _negotioatorController = _negotiator.GetComponent<CharacterController>();
+        SH = _negotiator.GetComponent<SniperShooting>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && (IsPaused == false))
+        if (Input.GetKeyDown(KeyCode.Escape) && IsPaused == false)
         {
             _pauseMenu = Instantiate(_pauseMenuPrefab);
             _pauseMenu.transform.SetParent(_canvas);
@@ -47,41 +49,44 @@ public class CharacterSelector : MonoBehaviour
             IsPaused = true;
             Time.timeScale = 0;
         }
-        if (Input.GetButtonDown("Tab") && (IsPaused == false))
+        if (Input.GetButtonDown("Tab") && IsPaused == false && SH.IsZoomedIn == false)
         {
             _selectionIconObject = Instantiate(_selectionIcon);
             _currentHUD.transform.SetParent(_canvas);
             
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetButton("Tab") && _characterID != 1 && (IsPaused == false))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && Input.GetButton("Tab") && _characterID != 1 && IsPaused == false && SH.IsZoomedIn == false)
         {
             _characterID = 1;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && Input.GetButton("Tab") && _characterID != 2 && (IsPaused == false))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && Input.GetButton("Tab") && _characterID != 2 && IsPaused == false && SH.IsZoomedIn == false)
         {
             _characterID = 2;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
+            
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && Input.GetButton("Tab") && _characterID != 3 && (IsPaused == false))
+        if (Input.GetKeyDown(KeyCode.Alpha3) && Input.GetButton("Tab") && _characterID != 3 && IsPaused == false && SH.IsZoomedIn == false)
         {
             _characterID = 3;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
+            
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && Input.GetButton("Tab") && _characterID != 4 && (IsPaused == false))
+        if (Input.GetKeyDown(KeyCode.Alpha4) && Input.GetButton("Tab") && _characterID != 4 && IsPaused == false && SH.IsZoomedIn == false)
         {
             _characterID = 4;
             InstantiateHUD(_characterID);
             SwapPos(_characterID);
             Destroy(_selectionIconObject);
+            
         }
-        if (Input.GetButtonUp("Tab") && (IsPaused == false))
+        if (Input.GetButtonUp("Tab") && IsPaused == false && SH.IsZoomedIn == false)
         {
             if (_selectionIconObject != null) Destroy(_selectionIconObject);
         }
@@ -95,6 +100,8 @@ public class CharacterSelector : MonoBehaviour
         else if (ID == 3) _currentHUD = Instantiate(_sniper2HUD);
         else if (ID == 4) _currentHUD = Instantiate(_sniper3HUD);
         _currentHUD.transform.SetParent(_canvas);
+        if (ID != 1) SH.SetAmmo(ID);
+
     }
 
     private void SwapPos(int ID)
