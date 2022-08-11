@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 769a3f0ea2f560a4e8198dd3f68b821d, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  NodeLinks:
+  - BaseNodeGuid: d636cc63-52c4-4e77-95d8-84f99360b207
+    PortName: Next
+    TargetNodeGuid: e79e6564-1c08-4884-bc5a-c6e751539468
+  - BaseNodeGuid: e79e6564-1c08-4884-bc5a-c6e751539468
+    PortName: YEss
+    TargetNodeGuid: 4b1c3c9c-46dd-4def-999b-6e2c6ed1e695
+  - BaseNodeGuid: e79e6564-1c08-4884-bc5a-c6e751539468
+    PortName: no
+    TargetNodeGuid: 92a19b3f-2d3f-4969-ad53-483bae0a7c62
+  DialogueNodeData:
+  - NodeGUID: 92a19b3f-2d3f-4969-ad53-483bae0a7c62
+    DialogueText: asdawd
+    Position: {x: 524, y: 286}
+  - NodeGUID: 4b1c3c9c-46dd-4def-999b-6e2c6ed1e695
+    DialogueText: afgaefa
+    Position: {x: 543, y: 51}
+  - NodeGUID: e79e6564-1c08-4884-bc5a-c6e751539468
+    DialogueText: dasdfas
+    Position: {x: 235, y: 156}

@@ -20,12 +20,14 @@ public class SniperShooting : MonoBehaviour
     private CharacterSelector CS;
     private int SniperMaxAmmo = 5;
     private Text AmmoUI;
+    private GameEnd GE;
 
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         CS = Player.GetComponent<CharacterSelector>();
         CurrentCrosshair = Crosshair.GetComponent<RawImage>();
+        GE = Player.GetComponent<GameEnd>();
     }
 
     void Update()
@@ -55,17 +57,17 @@ public class SniperShooting : MonoBehaviour
         {
             if (CS._characterID == 2)
             {
-                Sniper1Ammo = 5;
+                Sniper1Ammo = SniperMaxAmmo;
                 SetAmmo(2);
             }
             else if (CS._characterID == 3)
             {
-                Sniper2Ammo = 5;
+                Sniper2Ammo = SniperMaxAmmo;
                 SetAmmo(3);
             }
             else if (CS._characterID == 4)
             {
-                Sniper3Ammo = 5;
+                Sniper3Ammo = SniperMaxAmmo;
                 SetAmmo(4);
             }
         }
@@ -122,7 +124,7 @@ public class SniperShooting : MonoBehaviour
             if (hit.transform.gameObject.CompareTag("Enemy"))
             {
                 Destroy(hit.transform.gameObject);
-                Debug.Log("Victory!");
+                GE.EndGame(0);
             }
         }
     }

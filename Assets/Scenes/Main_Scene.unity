@@ -3242,6 +3242,8 @@ GameObject:
   - component: {fileID: 270946021}
   - component: {fileID: 270946022}
   - component: {fileID: 270946023}
+  - component: {fileID: 270946024}
+  - component: {fileID: 270946025}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -3402,6 +3404,102 @@ MonoBehaviour:
   ZoomSights: {fileID: 2800000, guid: 39cda2b17cd676a4cbfa4472271724c4, type: 3}
   Crosshair: {fileID: 1495467355}
   IsZoomedIn: 0
+--- !u!114 &270946024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270946012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f72f24cd974c4514aab36e61b62d5b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentKCM: ...Hello?
+  CurrentKPM: '-'
+  CurrentYCM: '-'
+  CurrentYPM: '-'
+  CurrentO1: Friendly
+  CurrentO2: Hostile
+  cycle: 0
+  Hostile: 0
+  BranchA: 0
+  BranchAA: 0
+  BranchBA: 0
+  FriendlyPlayerChatVariants:
+  - '-'
+  - Hello, I am the lead interrogator, I'm here to talk and resolve this situation
+    peacefully, are you willing to talk?
+  - Understood, the car will arrive in an hour. However this is only if you agree
+    to release the hostage when you get into the vehicle. Can we agree to that?
+  - Unfortunately, we can't agree to that. Release the hostage, let's end this peacefully
+    and noone will get hurt. We will note the judge you were co-operative, and your
+    sentence will be reduced.
+  - Okay, the car is on the way. We agree to your terms.
+  - We can't agree to that. We need to make sure the hostage is safe and sound, and
+    then we can let you go. Unfortunately, there is no other way.
+  - Okay, we agree. The car is on the way, and will arrive shortly.
+  - We can't do that. We need the hostage safe and sound, now.
+  - The snipers will be disarmed and I will personally approach you if you let the
+    hostage go and leave all your weapons away from yourself. Can we agree to that?
+  - You're dead either way. So give up right now, before we breach the place and
+    take you down.
+  FriendlyKidnapperChatVariants:
+  - ...Hello?
+  - Yes, I'm willing to talk. I want a car with no plate numbers, I will release
+    the hostage in a safe area after I make sure I am not being followed. This is
+    my request.
+  - I... I don't know. How can i be sure you are not lying about letting me go? The
+    hostage is my only leaverage. You know what, screw the money. Just get me the
+    car, and I promise to leave the hostage safe and sound.
+  - I... I can't do that. How do I know I'll won't get shot the moment I leave?
+  - Rodger that
+  - No. Screw this nice act... Get me the car or I'm killing the hostage. This is
+    my last offer.
+  - Okay, I'm waiting
+  - You asked for it. Try and get me if you can. *gunshot sounds*
+  - I-I think so. Okay the hostage is released. I'm going out!
+  - Oh, just as I thought. *Gunshot sounds*. The hostage is dead now. Take me if
+    you can, but I'm taking you with me.
+  HostilePlayerChatVariants:
+  - '-'
+  - This is the FBI, you are surrounded. Get out with your hands closed and you will
+    not be shot.
+  - We agree to your terms. The car is on the way.
+  - We repeat, get out with your hands up, or we will take you down. This is your
+    only option.
+  HostileKidnapperChatVariants:
+  - ...Hello?
+  - You do not make the rules. I want a car and 100k dollars in cash, as soon as
+    I make my escape I will leave the hostage in a safe area. Otherwise, I will shoot
+    the hostage.
+  - I'm waiting
+  - Got it. Good luck taking me alive! *gunshot sounds*
+  ButtonTexts:
+  - END
+  - Agree
+  - Disagree
+  - Reassure
+  - Threaten
+--- !u!114 &270946025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270946012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41a9d494efaf1a4aa439e5edbf888a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ending1: {fileID: 7754535103779324408, guid: 3c28eb823f060e2408eaeefef53c7534, type: 3}
+  Ending2: {fileID: 2084179214763932121, guid: 01be989ab288a6c428d5fbed12e20e94, type: 3}
+  Ending3: {fileID: 3984882684812925463, guid: c09755a178d82154ab60aa9012fa12c6, type: 3}
+  Ending4: {fileID: 585221747038160416, guid: 2d8efa1641ea8e543a0a6a889d98c093, type: 3}
+  EndingGO: {fileID: 0}
+  Canvas: {fileID: 720834606}
 --- !u!1001 &274139650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24331,7 +24429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796737347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.6, y: 7.929, z: -13.38}
+  m_LocalPosition: {x: 2.7, y: 0.8, z: 5.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

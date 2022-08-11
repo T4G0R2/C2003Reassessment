@@ -395,10 +395,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -406,21 +406,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'W A S D - move
-
-    E - interact
-
-    Mouse - look arround
-
-    LMB -
-    shoot (sniper only)
-
-    RMB - toggle zoom  (sniper only)
-
-    Tab - character
-    selection
-
-    ESC - pause'
+  m_Text: "W A S D - move\nE - interact\nMouse - look arround\nTab - character selection\nESC
+    - pause\n\nSniper only:\n\nLMB - shoot\nRMB - toggle zoom \nR - reload"
 --- !u!1 &5854127773040592982
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,3 +636,6 @@ MonoBehaviour:
   _canvas: {fileID: 0}
   _controlsPrefab: {fileID: 0}
   _controlsHUD: {fileID: 0}
+  _interrogationHUD: {fileID: 0}
+  _verificationHUD: {fileID: 0}
+  _player: {fileID: 0}
